@@ -65,4 +65,10 @@ end
 
 def runner
   # code runner here
+  welcome
+  initial_round
+  card_total = 0 
+  until card_total >= 21
+    hit?(card_total)
+  end
 end
