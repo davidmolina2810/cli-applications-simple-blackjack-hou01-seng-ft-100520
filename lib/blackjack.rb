@@ -36,13 +36,14 @@ def initial_round
   sum = card1 + card2
 end
 
-def hit?
+def hit?(card_total)
   # code hit? here
   prompt_user
   command = get_user_input
   if ['h','s'].find_index(command)
     if command == 'h'
       card = deal_card
+      card_total += card
     end
     if command == 's'
     end
@@ -50,7 +51,7 @@ def hit?
     invalid_command
     hit?
   end
-  card
+  card_total
 end
 
 def invalid_command
