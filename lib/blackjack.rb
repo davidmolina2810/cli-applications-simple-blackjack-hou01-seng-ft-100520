@@ -30,10 +30,9 @@ end
 
 def initial_round
   # code #initial_round here
-  card1 = deal_card
-  card2 = deal_card
-  display_card_total(card1)
-  display_card_total(card2)
+  display_card_total(deal_card)
+  display_card_total(deal_card)
+
   
 end
 
