@@ -45,7 +45,6 @@ def hit?
       card = deal_card
     end
     if command == 's'
-      break
     end
   else
     invalid_command
