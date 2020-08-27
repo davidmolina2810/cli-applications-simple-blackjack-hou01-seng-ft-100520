@@ -38,10 +38,25 @@ end
 
 def hit?
   # code hit? here
+  prompt_user
+  command = get_user_input
+  if ['h','s'].find_index(command)
+    if command == 'h'
+      card = deal_card
+    end
+    if command == 's'
+      break
+    end
+  else
+    invalid_command
+    hit?
+  end
+  card
 end
 
 def invalid_command
   # code invalid_command here
+  puts "Please enter a valid command"
 end
 
 #####################################################
